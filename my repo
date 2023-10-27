@@ -1,0 +1,27 @@
+import { createProfile, newPrivateKey } from '@/lib/contract';
+import LoginWindow from './loginWindow';
+import { User } from '@/lib/types';
+
+const inter = Inter({ subsets: ['latin'] });
+
+const cal = localFont({ src: './cal.woff2', display: 'swap', variable: '--font-cal' });
+
+const matter = localFont({
+  src: [
+    {
+      path: './Matter-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './Matter-Medium.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './Matter-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+});
