@@ -1,0 +1,29 @@
+# Input
+pair = "APT/USDC"
+price = 691000000
+confidence = 0.00001
+
+# Processing
+# In the processing section, you can use the input to either update an existing price or initialize a new one, 
+# based on your application's requirements.
+
+# Explanation
+explanation = "Admin submits the following price and confidence for the {} coin pair. This will either update the existing price or initialize the price. The confidence means that the price is accurate within +/- {}. So there would be a range of {:.5f} and {:.5f}.".format(pair, confidence, price + confidence, price - confidence)
+
+# Output
+print(explanation)
+
+# Receive input from the user
+pair = input("Enter the cryptocurrency pair (example: APT/USDC): ")
+price = float(input("Enter the price: "))
+confidence = float(input("Enter the confidence level (example: 0.00001): "))
+
+# Process the input
+price_range_start = price - confidence
+price_range_end = price + confidence
+
+# Display the results
+print("Admin submits the following price and confidence for the {} coin pair.".format(pair))
+print("This will either update the existing price or initialize the price.")
+print("The confidence means that the price is accurate within +/- {:.5f} APT.".format(confidence))
+print("So there would be a range of {:.5f} APT and {:.5f} APT.".format(price_range_start, price_range_end))
